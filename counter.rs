@@ -87,7 +87,7 @@ fn find_characters(buffer: BufReader<File>) -> i32 {
     for line in buffer.lines() {
         let line = line.unwrap();
         for word in line.split_whitespace() {
-            count += word.len() as i32;
+            count += word.len() as i32 + 1;
         }
     }
     count
